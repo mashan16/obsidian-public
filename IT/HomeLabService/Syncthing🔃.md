@@ -40,7 +40,7 @@ http://127.0.0.1:8384
 ## Запускать в виде службы
 Для настройки необходимо использовать утилиту которая умеет запускать Windows-приложения как службы.
 Подобных утилит достаточно много, но мы возьмём одну из самых удобных - NSSM (The Non-Sucking Service Manager). 
-- Скачиваем с официального сайта дистрибутив NSSM [nssm.cc/download](https://nssm.cc/download) ([Прямая ссылка](https://nssm.cc/release/nssm-2.24.zip)) [[nssm-2.24.zip]]
+- Скачиваем с официального сайта дистрибутив NSSM [nssm.cc/download](https://nssm.cc/download) ([Прямая ссылка](https://nssm.cc/release/nssm-2.24.zip))
 1. Распаковываем NSSM  в `c:\soft\nssm`
 2. Распаковываем Syncthing в `c:\soft\Sycnthing`
 - Полный путь до исполняемого файла Syncthing у нас получился такой - `c:\apps\syncthing\syncthing.exe`
