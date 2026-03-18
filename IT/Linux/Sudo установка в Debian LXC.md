@@ -1,11 +1,9 @@
 Установим `sudo` , создадим пользователя `user` , добавил его в  `sudoers`
 
 Устанавливаем
-```
-apt install -y sudo
-```
 Создаём пользователя `user` и вводить его пароль
 ```
+apt install -y sudo
 adduser user
 ```
 Добавляем его в группу `sudo` он же `sudoers`
