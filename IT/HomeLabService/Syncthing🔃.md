@@ -11,7 +11,18 @@ title:
 Хорошая статья про Syncthing на [Remontra.pro](https://remontka.pro/syncthing)
 
 
-# Windows + Автозапуск
+# Windows
+## Winget
+```
+winget install -e --id Syncthing.Syncthing --source winget
+```
+Добавляем в `PATH`
+```
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+```
+
+
+
 
 - Скачиваем последнюю версию с [офф сайта ](https://syncthing.net/downloads/)  
 - А лучше сразу с [GitHub](https://github.com/syncthing/syncthing/releases?q=&expanded=true) ищем тег `Latest` и архитектуру `syncthing-windows-amd64`
