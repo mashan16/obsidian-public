@@ -10,10 +10,10 @@ tags:
 ```
 nano /etc/ssh/sshd_config
 ```
-2. Находим параметр `PermitRootLogin` и ставим `yes` *ctrl+w в nano*
-3. Рестартуем сервер sshd
+2. Находим параметр `PermitRootLogin`  *ctrl+w в nano* и ставим `yes` 
+3. Рестартуем сервер ssh
 ```
-systemctl restart sshd.service
+systemctl restart ssh
 ```
 #### PermitRootLogin описание параметров
  • `yes`: Разрешает вход root-пользователя по SSH без ограничений. 
