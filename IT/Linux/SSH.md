@@ -10,10 +10,10 @@ tags:
 ```
 nano /etc/ssh/sshd_config
 ```
-2. Находим параметр `PermitRootLogin` и ставим `yes` *ctrl+w в nano*
-3. Рестартуем сервер sshd
+2. Находим параметр `PermitRootLogin`  *ctrl+w в nano* и ставим `yes` 
+3. Рестартуем сервер ssh
 ```
-systemctl restart sshd.service
+systemctl restart ssh
 ```
 #### PermitRootLogin описание параметров
  • `yes`: Разрешает вход root-пользователя по SSH без ограничений. 
@@ -22,18 +22,32 @@ systemctl restart sshd.service
 • `without-password`: # Разрешает вход root-пользователя по SSH только с использованием ключей SSH, без пароля. 
 
 ### Авторизация по ключу SSH
-В `/etc/ssh/sshd_config` параметр `PermitRootLogin` ставим `without-password`
-
-Открываем `/root/.ssh/authorized_keys`
+После подключения к удаленному серверу генерируем ключ ssh
+```sh
+ssh-keygen -t rsa -b 4096
 ```
-nano /root/.ssh/authorized_keys
+Копируем публичный ключ в `authorized_keys`
+```sh
+cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 ```
-И вставляем в таком формате
+Скачиваем `id_rsa` и `id_rsa.pub` себе на комп из `/root/.ssh/`
+Отключаем вход по ssh через пароль для этого закомментируем параметр `PermitRootLogin` в `/etc/ssh/sshd_config`
+```sh
+sudo sed -i 's/^[[:space:]]*PermitRootLogin[[:space:]]\+/# &/' /etc/ssh/sshd_config
 ```
-#mashanov.yas
-ssh-rsa AAAAB3NzaC1yc2EAAAABJQ и.д ключ
+Проверяем вручную что параметр закомментирован
+```sh
+nano /etc/ssh/sshd_config
 ```
-После этого можно уже будет войти по SSH по ключу
+Перезагружаем службу ssh
+```sh
+systemctl restart ssh
+```
+Проверяем подключение по ключу должно быть ок, по паролю не должно пускать.
+Удаляем ключи, на сервере они больше нам не нужны там.
+```sh
+rm /root/.ssh/id_rsa /root/.ssh/id_rsa.pub
+```
 ### Доступ по SSH между серверами
 *На сервере 1*  
 1. Генерируем публичный ключ, на все вопросы жмем Enter  
