@@ -98,12 +98,12 @@ PersistentKeepalive = 30 Проверка_состояния_сессии
 ListenPort = 1194
 Address = 10.10.0.1/24
 
-[Peer] Сlient_2 
-PublicKey = Public_key_client2
+[Peer]
+PublicKey = 
 AllowedIPs = 10.10.0.2/32
 
-[Peer] Сlient_3
-PublicKey = Public_key_client3
+[Peer]
+PublicKey = 
 AllowedIPs = 10.10.0.3/32
 ```
 Для клиента
@@ -111,13 +111,13 @@ AllowedIPs = 10.10.0.3/32
 - 1раз изменить `Endpoint` На IP своего сервера
 -  При копировании для каждого клиента менять `Address` на 0.3, 0.4, 0.5, и т.д *иначе получится клиент 3 с ip 0.2 и так далее *
 ```
-Address = 10.10.0.2/24 IP_adress_client
+Address = 10.10.0.2/24
 
 [Peer]
 PublicKey = Public_key_server
 AllowedIPs = 10.10.0.0/24
 Endpoint = 11.111.11:1194
-PersistentKeepalive = 30
+PersistentKeepalive = 15
 ```
 
 ## Черновик
