@@ -8,6 +8,7 @@ description: Documentation of PeerTube, a free software to take back control of 
 tags:
   - linux
   - home_soft
+  - "#public"
 ---
 
 # Моя инструкция Docker 
