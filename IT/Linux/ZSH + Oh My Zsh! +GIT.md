@@ -1,3 +1,8 @@
+---
+tags:
+  - bash
+  - linux
+---
 ```
 apt install zsh && apt install git apt && apt install fonts-powerline -yyy
 ```
