@@ -12,26 +12,53 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build
-        uses: konstfish/quartz-build-action@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # markdown source folder
-          source: / # Пусть относительно  
-          page_title: "Quartz"
-          # page title to be displayed in the browser
-          # quartz config files, I like keeping them in my .github folder to reduce clutter
-          # see https://quartz.jzhao.xyz/configuration & https://quartz.jzhao.xyz/layout respectively
-          quartz_config: .github/quartz/quartz.config.ts
-          quartz_layout: .github/quartz/quartz.layout.ts
-          #quartz static content
-          #quartz_icon: .github/quartz/favicon.png
-          #quartz_banner: .github/quartz/og_image.png
-          # custom css
-          #quartz_custom_css: .github/quartz/custom.scss
+          node-version: 22
+
+      - name: Clone Quartz
+        run: git clone --depth 1 --branch v4.5.2 https://github.com/jackyzha0/quartz.git _quartz-build
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: _quartz-build/node_modules
+          key: ${{ runner.os }}-quartz-${{ hashFiles('_quartz-build/package-lock.json') }}
+
+      - name: Install dependencies
+        working-directory: _quartz-build
+        run: npm ci
+
+      - name: Copy Quartz config
+        working-directory: _quartz-build
+        run: |
+          cp ../.github/quartz/quartz.config.ts .
+          cp ../.github/quartz/quartz.layout.ts .
+
+      - name: Copy content
+        working-directory: _quartz-build
+        run: |
+          rm -rf content
+          mkdir content
+          cp -r ../* content/ 2>/dev/null || true
+          rm -rf content/_quartz-build
+
+      - name: Build
+        working-directory: _quartz-build
+        run: npx quartz build -o $GITHUB_WORKSPACE/_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
