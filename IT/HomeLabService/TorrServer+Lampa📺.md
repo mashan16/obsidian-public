@@ -5,6 +5,7 @@ tags:
   - TorrServer
   - Lampa
   - Jackett
+  - "#public"
 ---
 Смотрим фильмы через торрент удобно на Windows или ТВ
 ## Используемые приложения
