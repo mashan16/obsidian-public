@@ -49,6 +49,7 @@ jobs:
           mkdir content
           cp -r ../* content/ 2>/dev/null || true
           rm -rf content/_quartz-build
+          rm -rf .git
 
       - name: Build
         working-directory: _quartz-build
