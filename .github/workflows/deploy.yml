@@ -35,6 +35,10 @@ jobs:
       - name: Install dependencies
         working-directory: _quartz-build
         run: npm ci
+      - name: Patch Date.tsx to show time
+        working-directory: _quartz-build
+        run: |
+          sed -i 's/day: "2-digit",/day: "2-digit",\n    hour: "2-digit",\n    minute: "2-digit",/' quartz/components/Date.tsx
 
       - name: Copy Quartz config
         working-directory: _quartz-build
@@ -42,18 +46,18 @@ jobs:
           cp ../.github/quartz/quartz.config.ts .
           cp ../.github/quartz/quartz.layout.ts .
 
-      - name: Copy content
-        working-directory: _quartz-build
-        run: |
-          rm -rf content
-          mkdir content
-          cp -r ../* content/ 2>/dev/null || true
-          rm -rf content/_quartz-build
-          rm -rf .git
+#      - name: Copy content
+#        working-directory: _quartz-build
+#        run: |
+#          rm -rf content
+#          mkdir content
+#          cp -r ../* content/ 2>/dev/null || true
+#          rm -rf content/_quartz-build
 
       - name: Build
         working-directory: _quartz-build
-        run: npx quartz build -o $GITHUB_WORKSPACE/_site
+#        run: npx quartz build -o $GITHUB_WORKSPACE/_site
+        run: npx quartz build -d $GITHUB_WORKSPACE -o $GITHUB_WORKSPACE/_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
