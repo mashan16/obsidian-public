@@ -19,6 +19,8 @@ title: Разворачиваем Wireguard сервера на Windows
 - `Clinet` = Кол-во конфигураций для клиентов
 - `ServerPrivatKey` и `ServerPublicKey` тут я думаю понятно приватный и публичный ключ сервера
 
+Доп статьи:
+[[Split DNS для WireGuard (NRPT)]]
 
 ### Клиенты wireguard
 **Для всех клиентов требуются права администратора!**
