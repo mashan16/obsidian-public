@@ -8,10 +8,7 @@ tags:
 - [[Как искать место для рыбалки на реке]]
 - [[Силиконовые приманки для джига]]
 - [[Деликатный спиннинговый монтаж для Light]]
-<<<<<<< HEAD
 - [[Таблица соответствия японской нумерации плетеных шнуров PE]]
-=======
->>>>>>> 848dc09de83acfd4bedafe39659ed42b6d68206e
 **Ссылки на веб**
 - [Про строй, тест и маркировку спиннинга, что означают надписи на удилище](https://russian.fishing/blog/spinning-stroj-test-markirovka.html)
 - [Рыболовный календарь (kalendar-rybolova)](https://kalendar-rybolova.ru/irkutskaya-oblast/irkutsk.php)
