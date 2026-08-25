@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      Youtube channel: "https://www.youtube.com/@xromocom",
+      "Youtube channel": "https://www.youtube.com/@xromocom",
       "Discord Community": "https://discord.gg/j2fpTzYy97",
       "Telegram group": "https://t.me/+e0-TfQULgDQ1MGQy",
     },
