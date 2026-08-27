@@ -6,6 +6,7 @@ tags:
   - network
   - linux
   - debian
+  - free_internet
 ---
 HTTP прокси
 - Устанавливаем расширение для браузера [Proxy SwitchyOmega](https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif) или [# Proxy SwitchyOmega 3 (ZeroOmega)](https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped)
