@@ -1,7 +1,11 @@
 ---
-tags: Фильм
+tags:
 Дата просмотра:
 Моя Оценка: 6
+Статус:
+  - Смотрел
+Тип:
+  - Фильм
 ---
 ![|300](https://avatars.mds.yandex.net/get-kinopoisk-image/10812607/7ae661a4-8d36-4fad-9278-9b63655c7eb3/600x900)
 - Название: Minecraft в кино (A Minecraft Movie)

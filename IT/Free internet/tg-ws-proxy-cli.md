@@ -8,8 +8,13 @@ tags:
 
 ## Update tg-ws-proxy (debian CLI systemd)
 
-[[Скрипт для обновления]] (еще не проверял)
+**Используем скрипт обновления**
+```bash
+curl -s https://raw.githubusercontent.com/mashan16/scripts/main/Linux/install_update_tg_ws_proxy.sh | bash
+```
 
+
+### В ручную
 1. Клонируем новую версию
 ```bash
 mkdir /opt/tg-ws-proxy-X.X.X
