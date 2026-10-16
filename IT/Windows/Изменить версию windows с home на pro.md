@@ -5,7 +5,7 @@ tags:
 Статья [winitpro.ru](https://winitpro.ru/index.php/2020/10/12/upgrade-redakcii-windows-10/)
 
 **1**. Откройте командную строку и [проверьте текущую версию и редакцию Windows](https://winitpro.ru/index.php/2023/08/29/uznat-versiyu-bild-windows/):
--  ![[Pasted image 20250610155312.png]]
+-  ![[image-2026.03.13.png]]
 - *В этом примере редакция Windows 10 **Home**  (в Windows 11 домашняя редакция называется **Core**).*
 ```
 DISM /online /Get-CurrentEdition

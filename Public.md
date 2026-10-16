@@ -1,8 +1,8 @@
 %% Begin Waypoint %%
 - **Files**
 
-- **[[Public/IT/IT]]**
-- **[[Public/Life/Life]]**
+- **[[IT]]**
+- **[[Life]]**
 - **[[Obsidian]]**
 - [[index]]
 - [[Readme]]

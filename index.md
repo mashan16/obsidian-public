@@ -12,8 +12,8 @@ cssclasses:
 
 - Life
 	- [[Auto]]
-	- [[Фильмы]]
-	- [[Сериалы]]
+	- [[Фильмы_old_kanban]]
+	- [[Сериалы_old_kanban]]
 	- [[Fishing]]
 
 Сайт размещён с помощью [GitHub Pages](https://www.google.com/search?q=github+pages+%D1%87%D1%82%D0%BE+%D1%8D%D1%82%D0%BE&oq=GitHub+Pages+xnj+) собирает сайт из репозитория и отображает хранилище [Obsidian](https://habr.com/ru/articles/820927/) с помощью [Quartz](https://www.google.com/search?q=quartz.jzhao+obsidian+%D1%87%D1%82%D0%BE+%D1%8D%D1%82%D0%BE&oq=quartz.jzhao+obsidian+%D1%87%D1%82%D0%BE+), более подробно описано в [[Readme]]
