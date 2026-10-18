@@ -46,3 +46,6 @@ Sonarr / Radarr
    qBittorrent (Home)
         ↓
       Jellyfin
+```
+
+![[music_stack_flow_v2.svg|943]]
