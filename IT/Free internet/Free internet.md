@@ -3,6 +3,7 @@
 - [[Настраиваем Web Proxy Telegram одной командой]]
 - [[Популярные DoH-Резолверы]]
 - [[Список хостеров VPS]]
+- [[Т2 ByByDPI Test]]
 - [[B4 - Bye Bye Big Bro]]
 - [[DPC Checker]]
 - [[iplist]]
