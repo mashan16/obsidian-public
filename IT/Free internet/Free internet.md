@@ -5,7 +5,7 @@
 - [[Список хостеров VPS]]
 - [[Т2 ByByDPI Test]]
 - [[B4 - Bye Bye Big Bro]]
-- [[DPC Checker]]
+- [[DPI Checker]]
 - [[iplist]]
 - [[MTProto (Proxy for TG)]]
 - [[Squid proxy]]
