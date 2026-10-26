@@ -7,7 +7,7 @@ tags:
 
 # DPI Detector by [Runnin4ik](https://github.com/Runnin4ik)
 
-Репозиторий https://github.com/Runnin4ik/dpi-detector
+Репозиторий  [Runnin4ik/dpi-detector](https://github.com/Runnin4ik/dpi-detector)
 
 Инструмент для анализа цензуры трафика в России: обнаруживает и классифицирует блокировки сайтов, хостингов и CDN (TCP16-20 блокировки), а также подмену DNS-запросов провайдером.
 
