@@ -5,6 +5,29 @@ tags:
   - ssh
 ---
 
+### Проверка неудачных попыток входа по SSH
+
+Показывает, кто и как пытался зайти на сервер. Ботов-сканеров в интернете много, так что неудачные попытки в логах это нормально.
+
+**Неудачные попытки за сегодня (через journald):**
+```bash
+sudo journalctl -u ssh --since today | grep -i "failed\|invalid"
+```
+
+**То же через файл лога** (если journald пуст):
+```bash
+sudo grep -i "failed\|invalid" /var/log/auth.log | tail -20
+```
+
+**Топ IP по неудачным попыткам:**
+```bash
+sudo journalctl -u ssh | grep "Failed password" | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' | sort | uniq -c | sort -rn | head
+```
+
+Как читать:
+- `Invalid user ...`: попытка зайти под несуществующим пользователем;
+- `Failed password ...`: неверный пароль (при `PasswordAuthentication no` таких записей не будет, останутся `Invalid user` и обрывы соединения);
+- число слева в третьей команде: количество попыток с этого IP.
 ### Настройка доступа по SSH на сервер Linux 
 1. Открываем конфиг sshd
 ```
